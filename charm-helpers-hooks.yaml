@@ -1,0 +1,12 @@
+branch: lp:charm-helpers
+destination: hooks/charmhelpers
+include:
+    - core
+    - fetch
+    - contrib.amulet
+    - contrib.hahelpers
+    - contrib.network
+    - contrib.openstack
+    - contrib.python
+    - contrib.storage
+    - payload

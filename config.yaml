@@ -1,0 +1,69 @@
+options:
+  nuage-additional-packages:
+    type: string
+    default: ""
+    description: |
+      Its for some additional packages
+  vsd-cms-id:
+    type: string
+    default:
+    description: |
+      CMS ID is used as an authentication token from VSD to CMS.
+      This value is being generated via nuage scripts and can be set pre/post
+      deployment.
+  vsd-cms-name:
+    type: string
+    default:
+    description: |
+      This is required only for 3.2 R4 and above releases of Nuage and Kilo.
+      Please give Maas env id so that it is unique per openstack cluster. This
+      name is used to create th CMS ID on Nuage-VSD which should be unique per
+      OSP cluster. Your Deployment will fail if this config is not provided.
+  vsd-server:
+    type: string
+    default:
+    description: Nuage VSD Server
+  vsd-auth:
+    type: string
+    default: "csproot:csproot"
+    description: Username Password to connect to Nuage VSD Server
+  vsd-organization:
+    type: string
+    default: csp
+    description: Name of the organization in Nuage VSD
+  vsd-auth-ssl:
+    type: boolean
+    default: True
+    description: SSL authentication of the Nuage VSD Server
+  vsd-base-uri:
+    type: string
+    default: "/nuage/api/v5_0"
+    description: Nuage VSD API endpoint URI
+  vsd-auth-resource:
+    type: string
+    default: "/me"
+    description: Nuage VSD authentication resource
+  vsd-netpart-name:
+    type: string
+    default: juju-enterprise
+    description: Name of the Organization or Enterprise to create in Nuage VSD
+  extension-drivers:
+    type: string
+    default: 'nuage_subnet, nuage_port, port_security'
+  type-drivers:
+    type: string
+    default: 'vxlan'
+  mechanism_drivers:
+    type: string
+    default: 'nuage'
+  service_plugins:
+    type: string
+    default: 'NuagePortAttributes,NuageAPI,NuageL3'
+  nuage-extra-key:
+    type: string
+    default:
+    description: Optional key for archive containing additional packages.
+  nuage-extra-source:
+    type: string
+    default:
+    description: Optional source for archive containing additional packages.
