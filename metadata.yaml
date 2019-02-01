@@ -1,6 +1,6 @@
 name: neutron-api-nuage
 summary: "Openstack Neutron Nuage Plugin"
-maintainer: Sunny Verma <sunny.verma@nokia.com"
+maintainer: "Sunny Verma <sunny.verma@nokia.com>"
 description: |
   Neutron is a virtual network service for OpenStack, and a part of
   Netstack.  This charm is used to configure Neutron service inside a

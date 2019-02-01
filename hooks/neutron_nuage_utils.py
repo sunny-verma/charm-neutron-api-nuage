@@ -32,11 +32,16 @@ NUAGE_PACKAGES = [
 NEUTRON_CONF_DIR = "/etc/neutron"
 SOURCES_LIST = '/etc/apt/sources.list'
 NUAGE_CONF = '%s/plugins/nuage/nuage_plugin.ini' % NEUTRON_CONF_DIR
+ML2_CONFIG = '/etc/neutron/plugins/ml2/ml2_conf.ini'
 
 BASE_RESOURCE_MAP = OrderedDict([
     (NUAGE_CONF, {
         'services': ['neutron-server'],
         'contexts': [neutron_nuage_context.NeutronNuagePluginContext()],
+    }),
+    (ML2_CONFIG, {
+        'services': ['neutron-server'],
+        'contexts': [neutron_nuage_context.NeutronNuagePluginContext()]
     }),
 ])
 
